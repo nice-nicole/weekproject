@@ -1,5 +1,14 @@
 const express = require('express');
+const app = express();
 const mysql = require('mysql');
+var bodyParser = require('body-parser');
+const path = require('path');
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use('/', express.static(__dirname + '/'));
+app.set('view engine', 'html');
 
 //Create connection
 const db = mysql.createConnection({
@@ -17,7 +26,7 @@ db.connect((err) => {
     console.log('MySql Connected...');
 });
 
-const app = express();
+//   const app = express();
 
 // Create db
 app.get('/createdb', (req, res) => {
@@ -31,21 +40,31 @@ app.get('/createdb', (req, res) => {
     });
 
 });
+app.get('/gethtml',(req, res) =>{
+    res.sendFile(path.join(__dirname+'/index.html'));
+})
 app.get('/getprogram',(req, res) =>{
     let sql= `SELECT * FROM  program`;
     let query = db.query(sql, (err, results) => {
         if(err) throw err;
         console.log(results);
-        res.send('fetched...');
+        res.json(results)
+        // res.send('fetched...');
     });
-    console.log(sql);
+    // console.log(req.body)
+    
+    
+    // console.log(sql);
 
 });
 app.get('/getprogram2/:id',(req, res) =>{
     console.log(req.params.id)
     let sql= "SELECT * FROM program WHERE programName = " +mysql.escape(req.params.id);
     let query = db.query(sql, (err, results) => {
-        if(err) throw err;
+        if(err) {
+            console.log(err);
+            res.json({"error":true});
+        }else{
         console.log(results);
         // res.send('fetched...');
 
@@ -61,13 +80,15 @@ app.get('/getprogram2/:id',(req, res) =>{
                     let query = db.query(sql, (err, results) => {
                         if(err) throw err;
                         console.log(results);
-                        // res.send('fetched...');
+                        res.json(results);
+
+                    
                 });
             });
         });
     });
     console.log(sql);
-
+        }
 });
 });
 
