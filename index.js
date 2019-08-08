@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mysql = require('mysql');
 var bodyParser = require('body-parser');
+const path = require('path');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.use(bodyParser.json());
@@ -39,14 +40,21 @@ app.get('/createdb', (req, res) => {
     });
 
 });
+app.get('/gethtml',(req, res) =>{
+    res.sendFile(path.join(__dirname+'/index.html'));
+})
 app.get('/getprogram',(req, res) =>{
     let sql= `SELECT * FROM  program`;
     let query = db.query(sql, (err, results) => {
         if(err) throw err;
         console.log(results);
-        res.send('fetched...');
+        res.json(results)
+        // res.send('fetched...');
     });
-    console.log(sql);
+    // console.log(req.body)
+    
+    
+    // console.log(sql);
 
 });
 app.get('/getprogram2/:id',(req, res) =>{
@@ -73,6 +81,7 @@ app.get('/getprogram2/:id',(req, res) =>{
                         if(err) throw err;
                         console.log(results);
                         res.json(results);
+
                     
                 });
             });
