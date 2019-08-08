@@ -1,11 +1,20 @@
 
+body{
+    overflow-x: hidden;
+    overflow-y: auto;
+  
+}
+
 #pamela{
     background-image:url("../images/future.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     width:100%;
+background-color:#D8BFD8;
+
     
 }
+
 .main{
    
     width: 100%;
@@ -14,14 +23,23 @@
     padding-left: 3%;
     
 }
-.main>h1{
+#home>h1{
     color:white;
     /* font-style: oblique; */
     font-size: 90px;
+    margin:-1%;
+    margin-left:7%;
 }
-.main>p{
+
+#home>p{
+
     color:white;
     font-size: 25px;
+    border:0px solid;
+    padding:3.5%;
+    margin-left:3%;
+    
+
    
   
 }
@@ -78,20 +96,22 @@ margin:0;
 }
 ul{
     border:0px solid white;
-    width:100%;
-    height: 10%;
+    width:97%;
+    height: 7%;
     padding-top:3%;
     margin-left: 10%;
     margin:0%;
     position:fixed;
     top: 0%;
-    background-color:#2E4053;
+    background-color:#330019 ;
+opacity:0.8;
+
 }
 
 .nav li{
     display:inline-block;
     align-items:center;
-    margin-left:15%;
+    margin-left:12%;
     /* margin-right:5%; */
    
    
@@ -123,13 +143,15 @@ li:hover{
 .containe {
     position: absolute;
     right: 13%;
-    left:10%;
+    left:0.5%;
     margin: 10%;
-    margin-top: 0%;
+    margin-top: -0.6%;
+    margin-bottom:10%;
     width: 60%;
     height:30%; 
-    padding: 4%;
-    background-color:#1ABC9C; 
+    padding: 7%;
+    background-color:#330019;
+   opacity: 0.8;
   }
   form.containe input[type=text] {
     padding: 0.9%;
@@ -141,21 +163,28 @@ li:hover{
     margin-left:6%;
     background: #f1f1f1;
   }
-  #explore{
-      color:black;
-      font-size:25px;
+  /* #explore{
+      color:white;
+      font-size:35px;
       text-align:center;
+      line-height:30%;
+  } */
+  #pfrm{
+    color:white;
+    font-size:45px;
+    text-align:center;
+    margin-top:-7%;
   }
   form.containe button {
     float: center;
-    width: 5%;
+    width: 12%;
     height: 14.3%;
-    padding: 10px;
+    padding: 1px;
     background:#95A5A6;
     color: white;
     font-size: 17px;
     border: 1px solid grey;
-    border-left: none;
+    /* border-left: none; */
     cursor: pointer;
   }
   
@@ -169,20 +198,25 @@ li:hover{
     display: table;
   }
   #button{
-    border: 2px solid white;
+    border: 0px solid white;
     padding: 1%;
-    border-radius: 50px 20px;
-    background-color: white;
-    color:black;
+    margin-bottom:2%;
+    border-radius: 20%;
+    background-color:transparent;
+    opacity:0.9;
+    color:white;
     height:10%;
-    width:15%;
+    width:110%;
+    font-size:15px;
+ margin-left:80%;
   }
 
 @import url('https://fonts.googleapis.com/css?family=Oleo+Script&display=swap');
 .card {
-   margin: 60px;
+   margin-left: 52%;
+   margin-top:-26%;
    width: 360px;
-   top: 50%;
+   top: 62%;
    left: 30%;
    position: absolute;
 }
@@ -194,13 +228,20 @@ li:hover{
 
 
 }
+
 #frm {
-   padding: 20px;
-   background-color: rgb(10, 10, 10);
+   padding: 50px;
+   background-color: #330019;
    opacity: 0.8;
-margin-top:130%;
-margin-right:15%;
-display:none;
+ 
+   margin-right:10%;
+   display:none;
+ 
+
+
+}
+section{
+    margin-top:-1%;
 }
 input {
    opacity: 0.7;
@@ -208,6 +249,7 @@ input {
 }
 #check {
    width: 10px;
+   color:white;
 }
 button {
    background-color: white;
@@ -223,8 +265,36 @@ h1 {
    color: white;
 font-style:oblique;
 }
-p {
+#p {
    color: white;
+font-size:20px;
    font-family: 'Oleo Script', cursive;
 }
+section{
+    border:0px solid;
+    margin:30%;
+    color:white;
+    background-color:#330019;
+    width:80%;
+    margin-left:5%;
+   padding:5%;
+    opacity:0.8;
+    margin-bottom: 0%;
+}
+#abtp,h2{
+  text-align:center;
+  font-size:20px;
+
+}
+span {
+    text-align: center;
+    
+    color: white;
+    border: 1px solid #330019;
+    float: left;
+    width: 100%;
+    background-color: #330019;
+  
+}
+
 

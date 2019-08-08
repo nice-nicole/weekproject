@@ -2,39 +2,43 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>online university</title>
     <!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css"> -->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-   <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 </head>
 
 <body>
-<div id="pamela">
-    <header>
-        <nav>
-            <ul class="nav">
-                <li><a href="#home"><strong>HOME</strong></a></li>
-                <li><a href="#explore"><strong>EXPLORE</strong></a></li>
-                <li><a href="#about"><strong>ABOUTUS</strong></a></li>
 
-            </ul>
-        </nav>
-    </header>
+    <div id="pamela">
+        <header>
+            <nav>
+                <ul class="nav">
+                    <li><a href="#home"><strong>HOME</strong></a></li>
+                    <li><a href="#explore"><strong>EXPLORE</strong></a></li>
+                    <li><a href="#about"><strong>ABOUTUS</strong></a></li>
+                    <!-- <li><a href="#frm"><strong>APPLYNOW</strong></a></li> -->
+
+                    <li><button id="button" type="submit"><strong>APPLY NOW</strong></button></li>
+
+                </ul>
+            </nav>
+        </header>
 
 
-    <div class="main">
+        <div class="main">
+            <div id="home">
 
-
-        <h1>Your future<br>starts here</h1>
-        <p>Whether you’re applying to college for the first time or looking to complete<br> your degree, online
-            applicationwill help you reach easy according to you faculity.</p><br>
-
-        <button id="button" type="submit"><strong>APPLY NOW</strong></button>
+                <h1>Your future<br>starts here</h1>
+                <p>Whether you’re applying to college for the first time or looking to complete<br> your degree,
+                    online
+                    applicationwill help you reach easy according to you faculity.</p><br>
 
         <div class="bg-img">
             <form class="containe">
@@ -45,59 +49,70 @@
                 <button type="submit"><i class="fa fa-search"></i></button>
                 <div id="output"></div>
 
+            </div>
+            <div class="bg-img">
+                <form action="/action_page.php" class="containe" id="explore">
+                    <strong>
+                        <p id="pfrm">Search for a faculty and Explore nearly over 25 colleges in Rwanda</p>
+                    </strong>
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="stacy">
+        <div class="card">
+            <form id="frm">
+                <h1>Application Forms</h1>
+                <div class="card-text">
+                    <label>Firstname
+                        <input type="text">
+                    </label><br>
+                    <label>Lastname
+                        <input type="text">
+                    </label><br>
+                    <label>Email
+                        <input type="email">
+                    </label><br>
+                    <label>Date
+                        <input type="date">
+                    </label><br>
+                    <label>PhoneNo
+                        <input type="tel">
+                    </label><br>
+                    <label>N.Exam Grades
+                        <input type="text">
+                    </label>
+                    <label>Diploma
+                        <input type="file">
+                    </label><br>
+                    <label>Country
+                        <input type="">
+                    </label><br>
+                    <label>City
+                        <input type="text">
+                    </label><br>
+                    <label>Street
+                        <input type="number">
+                    </label><br><br>
+                    <p style="color:white;"><strong>Please review the following</strong></p>
+                    <input id="check" type="checkbox">
+                    <p style="color:white;">By checking this checkbox i agree the terms of use and privacy conditions.(unless i
+                        have not
+                        finished secondary school i'm not allowed to use the site)
+                    </p>
+                </div>
+                <button width=200>SUBMIT</button>
             </form>
 
         </div>
 
     </div>
-</div>
-
-<div id="stacy">
-   <!--<div class="container">-->
-       <div class="card">
-           <form id="frm">
-               <h1>Application Forms</h1>
-               <div class="card-text">
-                   <label>Firstname
-                           <input type="text">
-                       </label><br>
-                   <label>Lastname
-                           <input type="text">
-                       </label><br>
-                   <label>Email
-                           <input type="email">
-                       </label><br>
-                   <label>Date
-                           <input type="date">
-                       </label><br>
-                   <label>PhoneNo
-                           <input type="tel">
-                       </label><br>
-                   <label>N.Exam Grades
-                           <input type="text">
-                       </label>
-                   <label>Diploma
-                           <input type="file">
-                       </label><br>
-                   <label>Country
-                           <input type="">
-                       </label><br>
-                   <label>City
-                           <input type="text">
-                       </label><br>
-                   <label>Street
-                           <input type="number">
-                       </label><br><br>
-                   <p><strong>Please review the following</strong></p>
-                   <input id="check" type="checkbox">
-                   <p>By checking this checkbox i agree the terms of use and privacy conditions.(unless i have not finished secondary school i'm not allowed to use the site)
-                   </p>
-               </div>
-               <button width=200>SUBMIT</button>
-           </form>
-       </div>
-   <!--</div>-->
-</div>
 
 <!-- <script type="text/javascript">
 
